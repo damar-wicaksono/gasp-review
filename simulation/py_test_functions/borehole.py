@@ -22,7 +22,7 @@ def rescale_input(xx: np.ndarray) -> np.ndarray:
      7. L, length of the borehole, [m], [1'120, 1'680]
      8. Kw, hydraulic conductivity of the borehole, [m.year^-1],[1'500, 15'000]
 
-    **Reference:**
+    **References:**
     (1) Max D. Morris, Toby J. Mitchell, and Donald Ylvisaker, "Bayesian Design
         and Analysis of Computer Experiments: Use of Derivatives in Surface 
         Prediction," Technometrics, vol. 35, no. 3, 1993, pp. 243-255
@@ -68,8 +68,8 @@ def eval(xx: np.ndarray) -> np.ndarray:
 
     **Reference:**
     (1) Max D. Morris, Toby J. Mitchell, and Donald Ylvisaker, "Bayesian Design
-    and Analysis of Computer Experiments: Use of Derivatives in Surface 
-    Prediction," Technometrics, vol. 35, no. 3, 1993, pp. 243-255
+        and Analysis of Computer Experiments: Use of Derivatives in Surface 
+        Prediction," Technometrics, vol. 35, no. 3, 1993, pp. 243-255
 
     :param xx: a n-by-8 input parameters matrix, where n is independent 
         realization
