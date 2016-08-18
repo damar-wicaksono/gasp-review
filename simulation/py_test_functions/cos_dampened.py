@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+"""A Python3 implementation of the dampened cosine test function"""
 import numpy as np
 
 def eval(x: np.ndarray) -> np.ndarray:
