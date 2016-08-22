@@ -20,8 +20,8 @@
 #' (2) Brian A. Worley, "Deterministic Uncertainty Analysis," in Proc. of 
 #'     the American Nuclear Society Winter Meeting, Los Angeles, USA, 1987
 #'
-#' @param xx A matrix of n-by-8 input parameters
-#' @return the flow rate through the borehole evaluated at xx, in [m^3.year^-1]
+#' @param xx A matrix of n-by-8 normalized input parameters
+#' @return an n-by-8 matrix of rescaled input parameters
 borehole.rescale_input <- function(xx) {
     # Rescale the inputs
     rw <- 0.05 + (0.15 - 0.05) * xx[,1] 

@@ -14,7 +14,7 @@ function [y] = borehole_eval(xx)
 %   6. Hl, potentiometric head of lower aquifer, [m]
 %   7. L, length of the borehole, [m]
 %   8. Kw, hydraulic conductivity of the borehole, [m.year^-1]
-
+%
 %  The output of the function is the flow rate through the borehole in 
 %  [m^3.year^-1]
 %
@@ -22,7 +22,7 @@ function [y] = borehole_eval(xx)
 % (1) Max D. Morris, Toby J. Mitchell, and Donald Ylvisaker, "Bayesian Design
 %     and Analysis of Computer Experiments: Use of Derivatives in Surface 
 %     Prediction," Technometrics, vol. 35, no. 3, 1993, pp. 243-255
-
+%
 % Assign the input arguments to local variables
 rw = xx(:,1);
 r  = xx(:,2);
