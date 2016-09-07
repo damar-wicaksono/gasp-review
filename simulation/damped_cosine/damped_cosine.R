@@ -1,4 +1,4 @@
-#' Calculate the Dampened Cosine Test Function
+#' Calculate the Damped Cosine Test Function
 #'
 #' Reference:
 #'   T. Santner, B. Williams, and W. Notz, "The Design and Analysis of 
@@ -6,7 +6,7 @@
 #' 
 #' @param x A vector of float [0, 1]. The argument.
 #' @return the function values evaluated at x
-cos_dampened <- function(x) {
+damped_cosine <- function(x) {
     if (missing(x)) {
         stop("Function needs argument with values [0,1]")
     } else if (any(x > 1.0)) {
