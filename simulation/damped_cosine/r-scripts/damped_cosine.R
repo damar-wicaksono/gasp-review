@@ -11,8 +11,8 @@ damped_cosine <- function(x) {
         stop("Function needs argument with values [0,1]")
     } else if (any(x > 1.0)) {
         stop("Function argument greater than 1.0, the domain is [0,1]")
-    } else if (any(x < 1.0)) {
-        stop("Function argument smaller than 1.0, the domain is [0,1]")
+    } else if (any(x < 0.0)) {
+        stop("Function argument smaller than 0.0, the domain is [0,1]")
     }
 
     y <- exp(1)^(-1.4 * x) * cos(3.5 * pi * x)
