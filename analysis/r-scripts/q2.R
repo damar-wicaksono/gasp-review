@@ -12,7 +12,7 @@
 #'   Advances in Systems and Measurements, vol. 3, pp. 11-21, 2010.
 #' 
 #' @param km_object the Gaussian process metamodel object from DiceKriging
-#' @param x_test the test inputs (dataframe)
+#' @param x_test the test inputs (a dataframe)
 #' @param y_test the test output data set (a vector)
 #' @return the coefficient of determination
 q2 <- function(km_object, x_test, y_test ) {
