@@ -6,7 +6,7 @@
 #' Requires the ggplot2 library
 #' 
 #' Reference:
-#'    Husam Hammad, "Space partitioning in engineering design via metamodel
+#'   Husam Hammad, "Space partitioning in engineering design via metamodel
 #'   acceptance score distribution," Engineering with Computers, vol. 23, 
 #'   pp. 175 - 185, 2007
 #'
