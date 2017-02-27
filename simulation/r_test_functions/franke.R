@@ -2,10 +2,10 @@
 #'
 #'  Franke's function [1] and x1,x2 are defined in (0,1).
 #'
-#' [1] E. N. Ben-Ari & D. Steinberg, "Modeling Data from Computer Experiments:
-#'     An Empirical Comparison of Kriging with MARS and Projection Pursuit 
-#'     Regression," Quality Engineering, vol. 19, pp. 327 - 338, 2007, 
-#'     doi: 10.1080/08982110701580930
+#' References:
+#' [1] Ben Haaland and Peter Z. G. Qian, "Accurate Emulators for Large-Scale
+#'     Computer Experiments," The Annals of Statistics, vol. 39, No. 6, 
+#'     pp. 2974 - 3002, doi: 10.1214/11-AOS929
 #'
 #' @param xx a matrix of n-by-2 input parameters, in (0,1)
 #' @return the value of Franke's function
