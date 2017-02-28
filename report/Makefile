@@ -156,3 +156,9 @@ franke_io: figures/plot_franke_io.png
 franke_io-scripts:	plots-report/plot_franke_io.R
 figures/plot_franke_io.png: plots-report franke_io-scripts
 	Rscript plots_report.R -f franke_io -o figures/plot_franke_io.png
+
+# Recipe to create i/o plots of the piston performance model
+piston_io: figures/plot_piston_io.png
+piston_io-scripts: plots-report/plot_piston_io.R plots-report/Rscripts/commonDataPiston.R
+figures/plot_piston_io.png: plots-report piston_io-scripts
+	Rscript plots_report.R -f piston_io -o figures/plot_piston_io.png

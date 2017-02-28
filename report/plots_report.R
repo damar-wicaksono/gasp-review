@@ -125,14 +125,21 @@ if (opt$figure == 1)
 } else if (opt$figure == 18)
 {
     source("./plots-report/plot_mean_function_conditional.R")
+    
 } else if (opt$figure == 19)
 {
     source("./plots-report/plot_bayesian_perspective.R")
+    
 } else if (opt$figure == "franke_3d")
 {
     source("./plots-report/plot_franke_3d.R")
+    
 } else if (opt$figure == "franke_io")
 {
     source("./plots-report/plot_franke_io.R")
+    
+} else if (opt$figure == "piston_io")
+{
+    source("./plots-report/plot_piston_io.R")
 }
 
