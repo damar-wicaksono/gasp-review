@@ -10,7 +10,8 @@
 #'     Computer Experiments," The Annals of Statistics, vol. 39, No. 6, 
 #'     pp. 2974 - 3002, doi: 10.1214/11-AOS929
 #' [2] Sonja Surjanovic and Derek Bingham, "Franke's Function," in Virtual 
-#'     Library of Simulation Experiments: Test Functions and Datasets
+#'     Library of Simulation Experiments: Test Functions and Datasets, 
+#'     www.sfu.ca/~ssurjano/franke2d.html, last accessed 28.02.2017
 #'
 #' @param xx a matrix of n-by-2 input parameters, in (0,1)
 #' @return the value of Franke's function
