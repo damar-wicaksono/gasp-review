@@ -46,12 +46,7 @@ opt <- parse_args(opt_parser)
 if (is.null(opt$figure)) {
     print_help(opt_parser)
     stop("The argument must be supplied", call. = FALSE)
-} else if (!is.null(opt$figure)) {
-#    if(!is.element(opt$figure, seq(1,30))) {
-#        print_help(opt_parser)
-#        stop("Only figure 1 to 30", call. = FALSE)
-#    }
-}
+} 
 
 otpfullname <- opt$output   # Plot output filename
 
@@ -138,6 +133,10 @@ if (opt$figure == 1)
 {
     source("./plots-report/plot_franke_io.R")
     
+} else if (opt$figure == "piston_output")
+{
+    source("./plots-report/plot_piston_output.R")
+
 } else if (opt$figure == "piston_io")
 {
     source("./plots-report/plot_piston_io.R")
