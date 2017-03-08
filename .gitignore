@@ -1,6 +1,11 @@
 # General
+*.db
 __pycache__/
 libs/
+# iPython/Jupyter Notebook Checkpoint
+.ipynb_checkpoints
+# RStudio Related
+.Rhistory
 # Exclude PDF
 *.pdf
 .Rproj.user
