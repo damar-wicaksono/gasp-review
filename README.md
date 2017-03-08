@@ -1,10 +1,10 @@
-# Gaussian Process Metamodelling: Review and Example of Applications
+# Gaussian Process Metamodeling: Review and Example of Applications
 
 ## First-Page Information
 
 | No | Key           | Value                                                              |
 |----|---------------|--------------------------------------------------------------------|
-| 1  | Full Title    | Gaussian Process Metamodelling: Review and Example of Applications |
+| 1  | Full Title    | Gaussian Process Metamodeling: Review and Example of Applications  |
 | 2  | STARSBase No. | SB-RND-ACT-006.13.010                                              |
 | 3  | Author        | Damar Wicaksono (WD41)                                             |
 | 4  | Shortname     | "tm-gp"                                                            |
