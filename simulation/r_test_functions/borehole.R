@@ -22,7 +22,7 @@
 #'
 #' @param xx A matrix of n-by-8 normalized input parameters
 #' @return an n-by-8 matrix of rescaled input parameters
-borehole.rescale_input <- function(xx) {
+rescaleInputBorehole <- function(xx) {
     # Rescale the inputs
     rw <- 0.05 + (0.15 - 0.05) * xx[,1] 
     r  <- 100. + (50000. - 100.) * xx[,2]
@@ -63,7 +63,7 @@ borehole.rescale_input <- function(xx) {
 #'
 #' @param xx A matrix of n-by-8 input parameters
 #' @return the flow rate through the borehole evaluated at xx, in [m^3.year^-1]
-borehole.eval <- function(xx) {
+evalOutputBorehole <- function(xx) {
     # Assign input arguments to local variables
     rw <- xx[,1] 
     r  <- xx[,2]
