@@ -15,7 +15,7 @@
 #'
 #' @param xx a matrix of n-by-2 input parameters, in (0,1)
 #' @return the value of Franke's function
-evalFranke <- function(xx) {
+evalOutputFranke <- function(xx) {
     # Assign input arguments to local variables
     x1 <- xx[,1] 
     x2 <- xx[,2]
