@@ -13,7 +13,7 @@
 #'  (1) Kevin J. Dowding, Martin Pilch, and Richard G. Hills, "Formulation of 
 #'      the Thermal Problem," Computer Methods in Applied Mechanics and 
 #'      Engineering, vol. 197, 2008, pp. 2385 - 2389
-
+#'
 #' @param xx an n-by-4 normalized input parameters matrix, where n is the 
 #'      of number independent realizations
 #' @return an n-by-4 matrix of rescaled input parameters
@@ -36,7 +36,7 @@ sandiatherm.rescale_input <- function(xx) {
 #' The Sandia Lab. thermal problem is based on a truncated infinite series 
 #' solution of heat conduction problem. It contains in total 7 free parameters 
 #' described below. The first 4 are considered input parameters.
-
+#'
 #' **Reference:**
 #' (1) Kevin J. Dowding, Martin Pilch, and Richard G. Hills, "Formulation of 
 #'     the Thermal Problem," Computer Methods in Applied Mechanics and 
