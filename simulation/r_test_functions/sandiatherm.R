@@ -17,17 +17,18 @@
 #' @param xx an n-by-4 normalized input parameters matrix, where n is the 
 #'      of number independent realizations
 #' @return an n-by-4 matrix of rescaled input parameters
-sandiatherm.rescale_input <- function(xx) {
+rescaleInputSandiaThermal <- function(xx) {
     # Rescale the inputs
-    q <- 1000. + (3500. - 1000.) * xx[,1]
-    L <- 1.27E-2 + (2.54E-2 - 1.27E-2) * xx[,2]
-    k <- 0.0455 + (0.0811 - 0.0455) * xx[,3]
-    rho_cp <- 3.38E5 + (4.69E5 - 3.38E5) * xx[,4]
+    # q <- 1000. + (3500. - 1000.) * xx[,1]
+    # L <- 1.27E-2 + (2.54E-2 - 1.27E-2) * xx[,2]
+    k <- 0.0455 + (0.0811 - 0.0455) * xx[,1]
+    rho_cp <- 3.38E5 + (4.69E5 - 3.38E5) * xx[,2]
 
     # Create a matrix of rescaled inputs
-    yy <- matrix(c(q, L, k, rho_cp), nrow = length(q))
+    #yy <- matrix(c(q, L, k, rho_cp), nrow = length(q))
+    xx_rescaled <- matrix(c(k, rho_cp), nrow = length(k))
 
-    return(yy)
+    return(xx_rescaled)
 }
 
 
@@ -49,37 +50,37 @@ sandiatherm.rescale_input <- function(xx) {
 #' @param temp_init the initial temperature (temp_init) in [K]
 #' @return an n-by-length(t) of temperature in [K] at each select 
 #'      time-points for each input parameters xx
-sandiatherm.eval <- function(xx, t, x, temp_init) {
+evalOutputSandiaThermal <- function(xx, time_step, x, temp_init, q, L) {
     # Assign the input parameters into local variables
-    q <- xx[,1]
-    L <- xx[,2]
-    k <- xx[,3]
-    rho_cp <- xx[,4]
+    #q <- xx[,1]
+    #L <- xx[,2]
+    k <- xx[,1]
+    rho_cp <- xx[,2]
 
     # Create a matrix for the complete output
     n_s <- dim(xx)[1]   # number of samples
-    n_t <- length(t)    # number of time points 
+    n_t <- length(time_step)    # number of time points 
     yy <- matrix(vector(,n_s), vector(,n_t), nrow = n_s, ncol = n_t) 
 
     # Loop over time-points and evaluate the temperature
-    for (i in 1:length(t)) {
-        if (t[i] < 0.) {
+    for (i in 1:length(time_step)) {
+        if (time_step[i] < 0.) {
             stop("Not valid for negative time")
-        } else if (t[i] < 1E-6) {
+        } else if (time_step[i] < 1E-6) {
             yy[,i] = temp_init
         } else {
             # Compute the sum of the series
             series_sum <- 0
-            for (j in 1:7) {
+            for (j in 1:6) {
                 series_sum <- series_sum + 1/j**2 * 
-                    exp(-1 * j**2 * pi**2 * k / rho_cp * t[i] / L**2) * 
+                    exp(-1 * j**2 * pi**2 * k / rho_cp * time_step[i] / L**2) * 
                     cos(j * pi * x / L)
             }
             series_sum <- series_sum * 2 / pi**2
 
             # Compute the temperature
             yy[,i] = replicate(n_s, temp_init) + q * L / k * 
-                (k / rho_cp * t[i] / L**2 + 1.0/3.0 - x / L + 
+                (k / rho_cp * time_step[i] / L**2 + 1.0/3.0 - x / L + 
                 0.5 * (x/L)**2 - series_sum)
         }
     }
